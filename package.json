@@ -4,8 +4,8 @@
   "description": "In this repository i will publish task for practicing in computer science.",
   "main": "index.js",
   "scripts": {
-    "test-stack": "mocha -r ./setup-mocha.js && mocha --compilers js:babel-core/register stack/stack.spec.js",
-    "test-queue": "mocha -r ./setup-mocha.js && mocha --compilers js:babel-core/register queue/queue.spec.js"
+    "test-stack": "mocha -r ./setup-mocha.js --compilers js:babel-core/register stack/stack.spec.js",
+    "test-queue": "mocha -r ./setup-mocha.js --compilers js:babel-core/register queue/queue.spec.js"
   },
   "repository": {
     "type": "git",
