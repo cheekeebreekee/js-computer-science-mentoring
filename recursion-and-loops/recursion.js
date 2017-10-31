@@ -4,6 +4,7 @@
  * @param b {number}
  * @return {number}
  */
+// recursion.js
 function euclidianAlgorithmRecursive(a, b) {
 
   if ( a !== 0 && b !== 0 ) {
