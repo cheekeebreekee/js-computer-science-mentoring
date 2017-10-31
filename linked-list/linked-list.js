@@ -10,13 +10,12 @@ export default class LinkedList {
       // assigns a node as the head of a list
     }
 
-    append(data) {
-      // adds a node to a list
-    }
-
-
     searchNodeAt(index) {
       // searches for a node at n-position in our list
+    }
+
+    append(data) {
+      // adds a node to a list
     }
 
 
