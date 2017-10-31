@@ -6,18 +6,26 @@ export default class LinkedList {
         this.length = 0;
     }
 
-    /* 1 assigns a node as the head of a list */
-    head() {}
+    head() {
+      // assigns a node as the head of a list
+    }
 
-    /* 2 adds a node to a list */
-    append(data) {}
+    append(data) {
+      // adds a node to a list
+    }
 
-    /* 3 searches for a node at n-position in our list */
-    searchNodeAt(index){}
 
-    /* 4 removes a node from a list */
-    removeNodeAt(index) {}
+    searchNodeAt(index) {
+      // searches for a node at n-position in our list
+    }
 
-    /* 5 returns true if list is empty */
-    isEmpty() {}
+
+    removeNodeAt(index) {
+      // removes a node from a list
+    }
+
+
+    isEmpty() {
+      // returns true if list is empty
+    }
 }
