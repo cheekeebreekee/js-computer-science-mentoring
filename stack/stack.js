@@ -1,28 +1,20 @@
 import Node from './node';
 
-class Stack {
-    constructor() {
-        this.top = null;
-        this.length = 0;
-    }
+export default class Stack {
+  constructor() {
+    this.top = null;
+    this.length = 0;
+  }
 
+  pop() {
     // delete the top element of stack
-    pop() {
-        let current = this.top;
-        this.top = current.next;
-        this.length--;
-    }
+  }
 
+  push(value) {
     // add element on top of stack
-    push(value) {
-        let currentNode = this.top;
-        this.top = new Node(value);
-        this.top.next = currentNode;
-        this.length++;
-    }
+  }
 
+  peek() {
     // returns value of top stack element
-    peek() {
-        return this.top ? this.top.value : null;
-    }
+  }
 }
