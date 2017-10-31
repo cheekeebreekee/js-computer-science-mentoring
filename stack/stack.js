@@ -1,3 +1,4 @@
+//js=computer-science-mentoring
 import Node from './node';
 
 export default class Stack {
