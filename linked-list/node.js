@@ -1,3 +1,4 @@
+//exporting node.js module
 export default class Node {
   constructor(data) {
     this.data = data;
