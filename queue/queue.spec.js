@@ -37,4 +37,34 @@ describe('Queue', () => {
         });
 
     });
+
+    describe('#shift', () => {
+        it('should assign new node as _top of queue', () => {
+            const value = 9;
+
+            const queue = new Queue();
+
+            queue.unshift(value);
+            queue.unshift(value);
+            queue.unshift(value);
+            queue.shift(value);
+
+            expect(queue.head).to.be.an.instanceof(Node);
+            expect(queue.head.value).to.equal(9);
+        });
+
+        it('should set new node as _top of queue and add new value', () => {
+            const queue = new Queue();
+
+            queue.unshift(50);
+            queue.unshift(100);
+            queue.unshift(51);
+            queue.unshift(422);
+
+            expect(queue.length).to.equal(4);
+            expect(queue.head.value).to.equal(50);
+            expect(queue.tail.value).to.equal(422);
+        });
+
+    });
 });
