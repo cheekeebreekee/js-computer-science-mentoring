@@ -7,7 +7,7 @@ export default class PriorityQueue {
       this.length = 0;
   	}
 
-  	unshift(data, priority) {
+  	enqueue(data, priority) {
       // add element of queue by priority
   	}
 

@@ -11,12 +11,12 @@ describe('PriorityQueue', () => {
         })
     });
 
-    describe('#unshift', () => {
+    describe('#enqueue', () => {
         it('should assign new node as _top of priorityQueue', () => {
             const priorityQueue = new PriorityQueue();
 
-            priorityQueue.unshift(50, 2);
-            priorityQueue.unshift(100, 1);
+            priorityQueue.enqueue(50, 2);
+            priorityQueue.enqueue(100, 1);
 
             expect(priorityQueue.length).to.equal(2);
             expect(priorityQueue.head.value).to.equal(100);
@@ -26,10 +26,10 @@ describe('PriorityQueue', () => {
         it('should add new node to priorityQueue', () => {
             const priorityQueue = new PriorityQueue();
 
-            priorityQueue.unshift(50, 1);
-            priorityQueue.unshift(100, 4);
-            priorityQueue.unshift(51, 8);
-            priorityQueue.unshift(422, 3);
+            priorityQueue.enqueue(50, 1);
+            priorityQueue.enqueue(100, 4);
+            priorityQueue.enqueue(51, 8);
+            priorityQueue.enqueue(422, 3);
 
             expect(priorityQueue.length).to.equal(4);
             expect(priorityQueue.head.value).to.equal(50);
@@ -38,15 +38,15 @@ describe('PriorityQueue', () => {
 
     });
 
-    describe('#shift', () => {
+    describe('#dequeue', () => {
         it('should assign new node as _top of priorityQueue', () => {
 
             const priorityQueue = new PriorityQueue();
 
-            priorityQueue.unshift(62, 4);
-            priorityQueue.unshift(53, 2);
-            priorityQueue.unshift(1, 2);
-            priorityQueue.shift();
+            priorityQueue.enqueue(62, 4);
+            priorityQueue.enqueue(53, 2);
+            priorityQueue.enqueue(1, 2);
+            priorityQueue.dequeue();
 
             expect(priorityQueue.tail.value).to.equal(62);
             expect(priorityQueue.head.value).to.equal(53);
@@ -55,13 +55,13 @@ describe('PriorityQueue', () => {
         it('should set new node as _top of priorityQueue and add new value', () => {
             const priorityQueue = new PriorityQueue();
 
-            priorityQueue.unshift(50, 2);
-            priorityQueue.unshift(100, 1);
-            priorityQueue.unshift(51, 7);
-            priorityQueue.unshift(422, 4);
-            priorityQueue.shift();
-            priorityQueue.shift();
-            priorityQueue.shift();
+            priorityQueue.enqueue(50, 2);
+            priorityQueue.enqueue(100, 1);
+            priorityQueue.enqueue(51, 7);
+            priorityQueue.enqueue(422, 4);
+            priorityQueue.dequeue();
+            priorityQueue.dequeue();
+            priorityQueue.dequeue();
 
             expect(priorityQueue.length).to.equal(1);
             expect(priorityQueue.head.value).to.equal(51);
@@ -75,12 +75,12 @@ describe('PriorityQueue', () => {
 
             const priorityQueue = new PriorityQueue();
 
-            priorityQueue.unshift(33, 4);
-            priorityQueue.unshift(2, 12);
-            priorityQueue.unshift(1, 9);
-            priorityQueue.unshift(8, 29);
-            priorityQueue.shift();
-            priorityQueue.shift();
+            priorityQueue.enqueue(33, 4);
+            priorityQueue.enqueue(2, 12);
+            priorityQueue.enqueue(1, 9);
+            priorityQueue.enqueue(8, 29);
+            priorityQueue.dequeue();
+            priorityQueue.dequeue();
 
             expect(priorityQueue.length).to.equal(2);
             expect(priorityQueue.head.value).to.equal(2);
@@ -91,14 +91,14 @@ describe('PriorityQueue', () => {
         it('should set new node as _top of priorityQueue and add new value', () => {
             const priorityQueue = new PriorityQueue();
 
-            priorityQueue.unshift(895, 5);
-            priorityQueue.unshift(334, 3);
-            priorityQueue.unshift(2, 1);
-            priorityQueue.unshift(8784, 10);
-            priorityQueue.shift();
-            priorityQueue.shift();
-            priorityQueue.shift();
-            priorityQueue.shift();
+            priorityQueue.enqueue(895, 5);
+            priorityQueue.enqueue(334, 3);
+            priorityQueue.enqueue(2, 1);
+            priorityQueue.enqueue(8784, 10);
+            priorityQueue.dequeue();
+            priorityQueue.dequeue();
+            priorityQueue.dequeue();
+            priorityQueue.dequeue();
 
             expect(priorityQueue.length).to.equal(0);
             expect(priorityQueue.head.value).to.equal(null);
