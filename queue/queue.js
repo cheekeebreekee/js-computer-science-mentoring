@@ -7,7 +7,7 @@ export default class Queue {
     this.length = 0;
   }
 
-  shift() {
+  dequeue() {
     // delete first element of queue
   }
 

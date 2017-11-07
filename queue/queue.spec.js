@@ -11,13 +11,13 @@ describe('Queue', () => {
         })
     });
 
-    describe('#unshift', () => {
+    describe('#enqueue', () => {
         it('should assign new node as _top of queue', () => {
             const value = 144;
 
             const queue = new Queue();
 
-            queue.unshift(value);
+            queue.enqueue(value);
 
             expect(queue.head).to.be.an.instanceof(Node);
             expect(queue.head.value).to.equal(144);
@@ -26,10 +26,10 @@ describe('Queue', () => {
         it('should set new node as _top of queue and add new value', () => {
             const queue = new Queue();
 
-            queue.unshift(50);
-            queue.unshift(100);
-            queue.unshift(51);
-            queue.unshift(422);
+            queue.enqueue(50);
+            queue.enqueue(100);
+            queue.enqueue(51);
+            queue.enqueue(422);
 
             expect(queue.length).to.equal(4);
             expect(queue.head.value).to.equal(50);
@@ -38,15 +38,15 @@ describe('Queue', () => {
 
     });
 
-    describe('#shift', () => {
+    describe('#dequeue', () => {
         it('should assign new node as _top of queue', () => {
 
             const queue = new Queue();
 
-            queue.unshift(62);
-            queue.unshift(53);
-            queue.unshift(1);
-            queue.shift();
+            queue.enqueue(62);
+            queue.enqueue(53);
+            queue.enqueue(1);
+            queue.dequeue();
 
             expect(queue.head).to.be.an.instanceof(Node);
             expect(queue.head.value).to.equal(53);
@@ -55,13 +55,13 @@ describe('Queue', () => {
         it('should set new node as _top of queue and add new value', () => {
             const queue = new Queue();
 
-            queue.unshift(50);
-            queue.unshift(100);
-            queue.unshift(51);
-            queue.unshift(422);
-            queue.shift();
-            queue.shift();
-            queue.shift();
+            queue.enqueue(50);
+            queue.enqueue(100);
+            queue.enqueue(51);
+            queue.enqueue(422);
+            queue.dequeue();
+            queue.dequeue();
+            queue.dequeue();
 
             expect(queue.length).to.equal(1);
             expect(queue.head.value).to.equal(50);
@@ -75,11 +75,11 @@ describe('Queue', () => {
 
             const queue = new Queue();
 
-            queue.unshift(33);
-            queue.unshift(2);
-            queue.unshift(1);
-            queue.shift();
-            queue.shift();
+            queue.enqueue(33);
+            queue.enqueue(2);
+            queue.enqueue(1);
+            queue.dequeue();
+            queue.dequeue();
 
             expect(queue.isEmpty()).to.equal(false);
         });
@@ -87,14 +87,14 @@ describe('Queue', () => {
         it('should set new node as _top of queue and add new value', () => {
             const queue = new Queue();
 
-            queue.unshift(895);
-            queue.unshift(334);
-            queue.unshift(2);
-            queue.unshift(8784);
-            queue.shift();
-            queue.shift();
-            queue.shift();
-            queue.shift();
+            queue.enqueue(895);
+            queue.enqueue(334);
+            queue.enqueue(2);
+            queue.enqueue(8784);
+            queue.dequeue();
+            queue.dequeue();
+            queue.dequeue();
+            queue.dequeue();
 
             expect(queue.isEmpty()).to.equal(true);
         });
