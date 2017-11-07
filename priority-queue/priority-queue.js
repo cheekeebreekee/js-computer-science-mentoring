@@ -2,7 +2,9 @@ import Node from './node';
 
 export default class PriorityQueue {
     constructor() {
-  		this.heap = new MaxHeap();
+      this.head = null;
+      this.tail = null;
+      this.length = 0;
   	}
 
   	unshift(data, priority) {
